@@ -1,0 +1,13 @@
+// 1. Recursive Approach (inefficient)
+class Solution {
+    public int climbStairs(int n) {
+        return solveRecursive(n);
+    }
+
+    private int solveRecursive(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        return solveRecursive(n - 1) + solveRecursive(n - 2);
+    }
+}
